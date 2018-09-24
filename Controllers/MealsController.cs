@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using NutritionApi.Domain.Entities;
+using NutritionApi.Infrastructure;
 
 namespace NutritionApi.Controllers
 {
@@ -10,15 +12,21 @@ namespace NutritionApi.Controllers
     [ApiController]
     public class MealsController : ControllerBase
     {
+        private readonly MealDB _meal;
+
+        public MealsController() 
+        {
+            _meal = new MealDB();
+        }
         /// <summary>
-        /// Get Aliments
+        /// Get Meal Aliments
         /// </summary>
         /// <param name="mealId"></param>
         /// <returns></returns>
         [HttpGet("{mealId}", Name = "GetAliments")]
-        public async Task<ActionResult<string>> GetAliments(int mealId)
+        public async Task<ActionResult<List<AlimentEntity>>> GetAliments(int mealId)
         {
-            return "value";
+            return await _meal.GetAliments(mealId);
         }
 
         // // POST api/values
