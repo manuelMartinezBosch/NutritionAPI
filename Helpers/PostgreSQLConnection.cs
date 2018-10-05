@@ -1,13 +1,13 @@
 using System;
 using Npgsql;
 
-namespace NutritionApi.Infrastructure.DAO
+namespace NutritionApi.Helpers
 {
-    public class PostgreConnection
+    public class PostgreSQLConnection
     {
         public NpgsqlConnection Connection;
 
-        public PostgreConnection()
+        public PostgreSQLConnection()
         {
             NpgsqlConnectionStringBuilder conn_string = new NpgsqlConnectionStringBuilder();
             conn_string.Host = "horton.elephantsql.com";
