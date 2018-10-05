@@ -4,16 +4,18 @@ using System.Data;
 using System.Threading.Tasks;
 using Npgsql;
 using NutritionApi.Domain.Entities;
-using NutritionApi.Infrastructure.DAO;
+using NutritionApi.Domain.Infrastructure;
+using NutritionApi.Helpers;
 
 namespace NutritionApi.Infrastructure
 {
-    public class MealDB
+    public class MealDb : IMeal
     {
-        private readonly PostgreDB _db;
+        private readonly IDBHelper _DBHelper;
 
-        public MealDB() {
-            _db = new PostgreDB();
+        public MealDb(IDBHelper DBHelper) 
+        {
+            _DBHelper = DBHelper;
         }
 
         public async Task<List<AlimentEntity>> GetAliments(int mealId)
@@ -23,7 +25,7 @@ namespace NutritionApi.Infrastructure
             List<NpgsqlParameter> parameters = new List<NpgsqlParameter>();
             parameters.Add(new NpgsqlParameter 
                 { ParameterName = "mealId", DbType = DbType.Int32, Value = mealId });
-            return await _db.ExecuteQueryAsync<AlimentEntity>(query, parameters, CommandType.Text);
+            return await _DBHelper.Get<AlimentEntity>(query, parameters);
         }
     }
 }
