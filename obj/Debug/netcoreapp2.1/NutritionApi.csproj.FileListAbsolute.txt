@@ -12,3 +12,17 @@ D:\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.AssemblyInfo.cs
 D:\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.RazorTargetAssemblyInfo.cache
 D:\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.dll
 D:\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.pdb
+C:\Users\manue\Projects\NutritionApi\bin\Debug\netcoreapp2.1\NutritionApi.deps.json
+C:\Users\manue\Projects\NutritionApi\bin\Debug\netcoreapp2.1\NutritionApi.runtimeconfig.json
+C:\Users\manue\Projects\NutritionApi\bin\Debug\netcoreapp2.1\NutritionApi.runtimeconfig.dev.json
+C:\Users\manue\Projects\NutritionApi\bin\Debug\netcoreapp2.1\NutritionApi.dll
+C:\Users\manue\Projects\NutritionApi\bin\Debug\netcoreapp2.1\NutritionApi.pdb
+C:\Users\manue\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.csprojAssemblyReference.cache
+C:\Users\manue\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.csproj.CoreCompileInputs.cache
+C:\Users\manue\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.RazorAssemblyInfo.cache
+C:\Users\manue\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.RazorAssemblyInfo.cs
+C:\Users\manue\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.AssemblyInfoInputs.cache
+C:\Users\manue\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.AssemblyInfo.cs
+C:\Users\manue\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.RazorTargetAssemblyInfo.cache
+C:\Users\manue\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.dll
+C:\Users\manue\Projects\NutritionApi\obj\Debug\netcoreapp2.1\NutritionApi.pdb

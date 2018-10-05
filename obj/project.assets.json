@@ -11676,11 +11676,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\NutritionApi\\NutritionApi.csproj",
+      "projectUniqueName": "c:\\Users\\manue\\Projects\\NutritionApi\\NutritionApi.csproj",
       "projectName": "NutritionApi",
-      "projectPath": "D:\\Projects\\NutritionApi\\NutritionApi.csproj",
+      "projectPath": "c:\\Users\\manue\\Projects\\NutritionApi\\NutritionApi.csproj",
       "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\NutritionApi\\obj\\",
+      "outputPath": "c:\\Users\\manue\\Projects\\NutritionApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
