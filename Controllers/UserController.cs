@@ -13,16 +13,18 @@ using NutritionApi.Application.Requests;
 using NutritionApi.Domain.Entities;
 using NutritionApi.Domain.Infrastructure;
 using NutritionApi.Helpers;
+using NutritionApi.Infrastructure;
 
 namespace NutritionApi.Controllers
 {
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
-    public class AuthorizationController : ControllerBase
+    public class UserController : ControllerBase
     {
-        private readonly AppSettings _appSettings;
         private readonly IUser _user;
-        public AuthorizationController(IOptions<AppSettings> appsettings,IUser user) 
+        private readonly AppSettings _appSettings;
+        public UserController(IOptions<AppSettings> appsettings, IUser user) 
         {
             _appSettings = appsettings.Value;
             _user = user;
@@ -34,10 +36,10 @@ namespace NutritionApi.Controllers
         /// <param name="password"></param>
         /// <returns></returns>
         [AllowAnonymous]
-        [HttpPost]
-        public async Task<IActionResult> Authorize([FromBody] UserRequest user) 
+        [HttpPost("Create")]
+        public async Task<IActionResult> Create([FromBody] UserRequest user) 
         {
-            Int32 userId = await _user.GetUserId(user.Mail, user.Password).ConfigureAwait(false);
+            Int32 userId = await _user.CreateUser(user.Mail, user.Password).ConfigureAwait(false);
             if(userId == 0) return NoContent();
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
